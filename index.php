@@ -1,6 +1,6 @@
 <?php
 // Reads the variables sent via POST from our gateway
-if(!empty($_POST) && !empty($_POST['phoneNumber'])){
+
 require_once('AfricasTalkingGateway.php');
 require_once('config.php');
      
@@ -44,5 +44,5 @@ else if ( $text == "1" ) {
 header('Content-type: text/plain');
 echo $response;
 // DONE!!!
-}
+
 ?>
