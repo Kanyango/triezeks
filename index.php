@@ -1,7 +1,9 @@
 <?php
 // Reads the variables sent via POST from our gateway
 if(!empty($_POST) && !empty($_POST['phoneNumber'])){
+require_once('AfricasTalkingGateway.php');
 require_once('config.php');
+     
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
