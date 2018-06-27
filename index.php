@@ -4,10 +4,27 @@
 require_once('AfricasTalkingGateway.php');
 require_once('config.php');
      
+
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
 $text        = $_POST["text"];
+
+$url = 'https://lengostreamx.pagekite.me/';
+
+$data = array('sessionId' => $serviceCode, 'serviceCode' => $serviceCode, 'phoneNo' => $phoneNumber, 'text' => $text);
+
+// use key 'http' even if you send the request to https://...
+$options = array(
+    'http' => array(
+        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+        'method'  => 'POST',
+        'content' => http_build_query($data)
+    )
+);
+$context  = stream_context_create($options);
+$result = file_get_contents($url, false, $context);
+
 if ( $text == "" ) {
      // This is the first request. Note how we start the response with CON
      $response  = "CON What would you want to check \n";
