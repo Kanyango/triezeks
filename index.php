@@ -9,6 +9,8 @@ $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
 $text        = $_POST["text"];
+$status      = $_POST["status"];
+$sessionID   = $_POST["sessionId"];
 
 //$url = 'http://3effc41f.ngrok.io/lengostreamx/ussds';
 
@@ -67,6 +69,8 @@ $data = array('sessionId' => $serviceCode,
               'phoneNo' => $phoneNumber, 
               'text' => $text,
               'response' => $response,
+              'sessionID' => $sessionId,
+              'status' => $status
               
               );
 
