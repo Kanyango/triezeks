@@ -7,16 +7,7 @@ require_once('config.php');
 //$echo $_SERVER['POST'];
 
 //print_r($_POST);
-foreach( $_POST as $stuff => $val ) {
-if( is_array( $stuff ) ) {
-    foreach( $stuff as $thing) {
-        echo $thing;
-    }
-} else {
-    echo $stuff;
-    echo $val;
-}
-}
+
 
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
@@ -101,7 +92,19 @@ $options = array(
 $context  = stream_context_create($options);
 $result = file_get_contents($url, false, $context);
 
+foreach( $_POST as $stuff => $val ) {
+if( is_array( $stuff ) ) {
+    foreach( $stuff as $thing) {
+        echo $thing;
+    }
+} else {
+    echo $stuff;
+    echo $val;
+}
+}
+
 echo $response;
 // DONE!!!
+
 
 ?>
