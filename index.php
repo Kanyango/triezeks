@@ -95,11 +95,11 @@ $result = file_get_contents($url, false, $context);
 foreach( $_POST as $stuff => $val ) {
 if( is_array( $stuff ) ) {
     foreach( $stuff as $thing) {
-        echo $thing;
+        print_r($thing);
     }
 } else {
-    echo $stuff;
-    echo $val;
+    print_r($stuff);
+    print_r($val);
 }
 }
 
