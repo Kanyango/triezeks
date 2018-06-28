@@ -10,7 +10,7 @@ $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
 $text        = $_POST["text"];
 
-$url = 'https://lengostreamx.pagekite.me/';
+$url = 'http://03e67277.ngrok.io';
 
 $data = array('sessionId' => $serviceCode, 'serviceCode' => $serviceCode, 'phoneNo' => $phoneNumber, 'text' => $text);
 
