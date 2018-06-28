@@ -4,7 +4,10 @@
 require_once('AfricasTalkingGateway.php');
 require_once('config.php');
 
-$echo $_SERVER['POST'];
+//$echo $_SERVER['POST'];
+
+var_dump($_POST);
+
 
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
