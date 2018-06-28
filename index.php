@@ -3,7 +3,8 @@
 
 require_once('AfricasTalkingGateway.php');
 require_once('config.php');
-     
+
+$echo $_SERVER['POST'];
 
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
@@ -11,6 +12,8 @@ $phoneNumber = $_POST["phoneNumber"];
 $text        = $_POST["text"];
 $status      = $_POST["status"];
 $sessionID   = $_POST["sessionId"];
+
+
 
 //$url = 'http://3effc41f.ngrok.io/lengostreamx/ussds';
 
@@ -61,6 +64,7 @@ else if ( $text == "1" ) {
 }
 // Print the response onto the page so that our gateway can read it
 header('Content-type: text/plain');
+
 
 $url = 'http://3effc41f.ngrok.io/lengostreamx/ussds';
 
