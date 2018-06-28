@@ -7,7 +7,15 @@ require_once('config.php');
 //$echo $_SERVER['POST'];
 
 //print_r($_POST);
-print_r(array_keys($_POST));
+foreach( $_POST as $stuff ) {
+    if( is_array( $stuff ) ) {
+        foreach( $stuff as $thing ) {
+            echo $thing;
+        }
+    } else {
+        echo $stuff;
+    }
+}
 
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
