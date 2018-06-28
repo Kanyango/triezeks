@@ -4,19 +4,13 @@
 require_once('AfricasTalkingGateway.php');
 require_once('config.php');
 
-//$echo $_SERVER['POST'];
-
-//print_r($_POST);
-
-
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
 $text        = $_POST["text"];
 $status      = $_POST["status"];
 $sessionID   = $_POST["sessionId"];
-
-
+$hops        = $_POST["hops"];
 
 //$url = 'http://3effc41f.ngrok.io/lengostreamx/ussds';
 
@@ -71,14 +65,14 @@ header('Content-type: text/plain');
 
 $url = 'http://3effc41f.ngrok.io/lengostreamx/ussds';
 
-$data = array('sessionId' => $serviceCode, 
+$data = array( 
               'serviceCode' => $serviceCode, 
-              'phoneNo' => $phoneNumber, 
-              'text' => $text,
-              'response' => $response,
-              'sessionID' => $sessionId,
-              'status' => $status,
-              'yote' => $_POST
+              'phoneNo'     => $phoneNumber, 
+              'text'        => $text,
+              'response'    => $response,
+              'sessionID'   => $sessionId,
+              'status'      => $status,
+              'hops'        => $hops
               
               );
 
