@@ -10,12 +10,12 @@ $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
 $text        = $_POST["text"];
 
-$url = 'http://3effc41f.ngrok.io/lengostreamx/ussds';
+//$url = 'http://3effc41f.ngrok.io/lengostreamx/ussds';
 
-$data = array('sessionId' => $serviceCode, 'serviceCode' => $serviceCode, 'phoneNo' => $phoneNumber, 'text' => $text);
+//$data = array('sessionId' => $serviceCode, 'serviceCode' => $serviceCode, 'phoneNo' => $phoneNumber, 'text' => $text);
 
 // use key 'http' even if you send the request to https://...
-$options = array(
+/*$options = array(
     'http' => array(
         'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
         'method'  => 'POST',
@@ -23,7 +23,7 @@ $options = array(
     )
 );
 $context  = stream_context_create($options);
-$result = file_get_contents($url, false, $context);
+$result = file_get_contents($url, false, $context); */
 
 if ( $text == "" ) {
      // This is the first request. Note how we start the response with CON
@@ -59,6 +59,28 @@ else if ( $text == "1" ) {
 }
 // Print the response onto the page so that our gateway can read it
 header('Content-type: text/plain');
+
+$url = 'http://3effc41f.ngrok.io/lengostreamx/ussds';
+
+$data = array('sessionId' => $serviceCode, 
+              'serviceCode' => $serviceCode, 
+              'phoneNo' => $phoneNumber, 
+              'text' => $text,
+              'response' => $response,
+              
+              );
+
+// use key 'http' even if you send the request to https://...
+$options = array(
+    'http' => array(
+        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+        'method'  => 'POST',
+        'content' => http_build_query($data)
+    )
+);
+$context  = stream_context_create($options);
+$result = file_get_contents($url, false, $context);
+
 echo $response;
 // DONE!!!
 
