@@ -72,7 +72,7 @@ $data = array(
               'response'    => $response,
               'sessionID'   => $sessionId,
               'status'      => $status,
-              'timestamp'        => $now
+              //'timestamp'        => $now
               
               );
 
