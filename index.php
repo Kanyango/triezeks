@@ -7,14 +7,15 @@ require_once('config.php');
 //$echo $_SERVER['POST'];
 
 //print_r($_POST);
-foreach( $_POST as $stuff ) {
-    if( is_array( $stuff ) ) {
-        foreach( $stuff as $thing ) {
-            echo $thing;
-        }
-    } else {
-        echo $stuff;
+foreach( $_POST as $stuff => $val ) {
+if( is_array( $stuff ) ) {
+    foreach( $stuff as $thing) {
+        echo $thing;
     }
+} else {
+    echo $stuff;
+    echo $val;
+}
 }
 
 $sessionId   = $_POST["sessionId"];
