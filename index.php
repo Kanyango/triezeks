@@ -6,7 +6,7 @@ require_once('config.php');
 
 //$echo $_SERVER['POST'];
 
-print_r($_POST);
+//print_r($_POST);
 
 
 $sessionId   = $_POST["sessionId"];
