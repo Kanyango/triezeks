@@ -10,7 +10,7 @@ $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
 $text        = $_POST["text"];
 
-$url = 'http://03e67277.ngrok.io';
+$url = 'http://3effc41f.ngrok.io/lengostreamx/ussds';
 
 $data = array('sessionId' => $serviceCode, 'serviceCode' => $serviceCode, 'phoneNo' => $phoneNumber, 'text' => $text);
 
