@@ -11,7 +11,7 @@ $text        = $_POST["text"];
 $status      = $_POST["status"];
 $sessionID   = $_POST["sessionId"];
 $hops        = $_POST["hops"];
-
+$now             = new DateTime();
 //$url = 'http://3effc41f.ngrok.io/lengostreamx/ussds';
 
 //$data = array('sessionId' => $serviceCode, 'serviceCode' => $serviceCode, 'phoneNo' => $phoneNumber, 'text' => $text);
@@ -72,7 +72,7 @@ $data = array(
               'response'    => $response,
               'sessionID'   => $sessionId,
               'status'      => $status,
-              'hops'        => $hops
+              'timestamp'        => $now
               
               );
 
