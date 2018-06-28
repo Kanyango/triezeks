@@ -77,7 +77,8 @@ $data = array('sessionId' => $serviceCode,
               'text' => $text,
               'response' => $response,
               'sessionID' => $sessionId,
-              'status' => $status
+              'status' => $status,
+              'yote' => $_POST
               
               );
 
@@ -92,16 +93,7 @@ $options = array(
 $context  = stream_context_create($options);
 $result = file_get_contents($url, false, $context);
 
-foreach( $_POST as $stuff => $val ) {
-if( is_array( $stuff ) ) {
-    foreach( $stuff as $thing) {
-        print_r($thing);
-    }
-} else {
-    print_r($stuff);
-    print_r($val);
-}
-}
+
 
 echo $response;
 // DONE!!!
