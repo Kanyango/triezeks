@@ -63,7 +63,7 @@ else if ( $text == "1" ) {
 header('Content-type: text/plain');
 
 
-$url = 'http://fec43943.ngrok.io/lengostreamx/ussds';
+$url = 'http://fec43943.ngrok.io/lengoStreamx/ussds';
 
 $data = array( 
               'serviceCode' => $serviceCode, 
