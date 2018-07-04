@@ -70,9 +70,8 @@ $data = array(
               'phoneNo'     => $phoneNumber, 
               'text'        => $text,
               'response'    => $response,
-              'sessionID'   => $sessionId,
-              'status'      => $status,
-              //'timestamp'        => $now
+              'sessionID'   => $sessionId
+          
               
               );
 
